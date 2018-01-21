@@ -1,0 +1,23 @@
+// Copyright 2018 budougumi0617 All Rights Reserved.
+
+syntax = "proto3";
+
+package tasklist;
+
+// For define null request
+import "google/protobuf/empty.proto";
+
+service TaskManager {
+  rpc GetTask (GetTaskRequest) returns (Task) {}
+  rpc ListTasks (google.protobuf.Empty) returns (stream Task) {}
+}
+
+message Task {
+  int32 id = 1;
+  string title = 2;
+  string detail = 3;
+}
+
+message GetTaskRequest {
+  int32 id = 1;
+}
