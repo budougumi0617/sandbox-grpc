@@ -1,7 +1,7 @@
 // Copyright 2018 budougumi0617 All Rights Reserved.
 
-// mock_tasklist_test has mock client code and test cases
-package mock_tasklist_test
+// client has mock client code and test cases
+package client
 
 import (
 	"fmt"
