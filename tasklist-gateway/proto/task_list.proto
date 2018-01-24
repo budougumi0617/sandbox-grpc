@@ -2,7 +2,7 @@
 
 syntax = "proto3";
 
-package tasklist;
+package tasklistgateway;
 
 // For define null request
 import "google/protobuf/empty.proto";

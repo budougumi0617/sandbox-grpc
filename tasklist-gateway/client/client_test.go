@@ -1,7 +1,7 @@
 // Copyright 2018 budougumi0617 All Rights Reserved.
 
-// mock_tasklist_test has mock client code and test cases
-package mock_tasklist_test
+// client has mock client code and test cases
+package client
 
 import (
 	"fmt"
@@ -10,8 +10,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	tlmock "github.com/budougumi0617/sandbox-grpc/tasklist/mockproto"
-	tlpb "github.com/budougumi0617/sandbox-grpc/tasklist/proto"
+	tlmock "github.com/budougumi0617/sandbox-grpc/tasklistgateway/mockproto"
+	tlpb "github.com/budougumi0617/sandbox-grpc/tasklistgateway/proto"
 	"github.com/golang/mock/gomock"
 	"github.com/golang/protobuf/proto"
 )
