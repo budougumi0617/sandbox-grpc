@@ -10,8 +10,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	tlmock "github.com/budougumi0617/sandbox-grpc/tasklistgateway/mockproto"
-	tlpb "github.com/budougumi0617/sandbox-grpc/tasklistgateway/proto"
+	tlmock "github.com/budougumi0617/sandbox-grpc/tasklist-gateway/mockproto"
+	tlpb "github.com/budougumi0617/sandbox-grpc/tasklist-gateway/proto"
 	"github.com/golang/mock/gomock"
 	"github.com/golang/protobuf/proto"
 )
