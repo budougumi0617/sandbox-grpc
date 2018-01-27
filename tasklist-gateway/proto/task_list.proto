@@ -7,9 +7,20 @@ package tasklistgateway;
 // For define null request
 import "google/protobuf/empty.proto";
 
+// For grpc gateway
+import "google/api/annotations.proto";
+
 service TaskManager {
-  rpc GetTask (GetTaskRequest) returns (Task) {}
-  rpc ListTasks (google.protobuf.Empty) returns (stream Task) {}
+  rpc GetTask (GetTaskRequest) returns (Task) {
+    option (google.api.http) = {
+       get: "/v1/tasklist-gateway/task/{id}" // "id" is defined in GetTaskRequest
+    };
+  }
+  rpc ListTasks (google.protobuf.Empty) returns (stream Task) {
+    option (google.api.http) = {
+       get: "/v1/tasklist-gateway/task"
+    };
+  }
 }
 
 message Task {
