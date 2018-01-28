@@ -24,7 +24,6 @@ func run() error {
 
 	mux := runtime.NewServeMux()
 	opts := []grpc.DialOption{grpc.WithInsecure()}
-	//err := gw.RegisterYourServiceHandlerFromEndpoint(ctx, mux, *echoEndpoint, opts)
 	err := gw.RegisterTaskManagerHandlerFromEndpoint(ctx, mux, *tasklistEndpoint, opts)
 	if err != nil {
 		return err
